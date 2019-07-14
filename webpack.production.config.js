@@ -5,7 +5,7 @@ var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 //先清空build文件夹下的文件
 var fs = require('fs');
-var	buildPath='./build/';
+var	buildPath='./dist/';
 var folder_exists = fs.existsSync(buildPath);
 if(folder_exists == true)
 {
@@ -24,7 +24,7 @@ module.exports = {
 	],
 	//输出文件配置
 	output: {
-		path: path.join(__dirname, 'build'),
+		path: path.join(__dirname, 'dist'),
 		filename: 'bundle.js'
 	},
 	//更多配置项
@@ -40,7 +40,8 @@ module.exports = {
 		//Webpack提供了设置环境变量来优化代码的方案
 		new webpack.DefinePlugin({
 	      'process.env':{
-	        'NODE_ENV': JSON.stringify('production')
+			//'NODE_ENV': JSON.stringify('production')
+			'NODE_ENV': JSON.stringify('development')
 	      }
 	    }),
 	    //复制文件到构建目录

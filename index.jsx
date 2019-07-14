@@ -1,14 +1,14 @@
 
-require('./app/lib/common.css');
+require('@/lib/common.css');
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Search from './app/components/search.jsx'; 
-import Header from './app/components/header.jsx'; 
-import Otherapp from './app/components/otherapp.jsx'; 
-import Spike from './app/components/spike.jsx'; 
-import More from './app/components/more.jsx'; 
-import Like from './app/components/like.jsx'; 
+import Search from '@/components/search.jsx'; 
+import Header from '@/components/header.jsx'; 
+import Otherapp from '@/components/otherapp.jsx'; 
+import Spike from '@/components/spike.jsx'; 
+import More from '@/components/more.jsx'; 
+import Like from '@/components/like.jsx'; 
 
 ReactDOM.render(
 	<div>
